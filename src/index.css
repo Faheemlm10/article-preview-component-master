@@ -1,13 +1,375 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --Very-Dark-Grayis-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Light-Grayish-Blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 13px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  /* height: 20rem; */
+}
+
+.first {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.first img {
+  width: 100%;
+  height: 20rem;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 3rem 5rem 3rem;
+  /* justify-content: space-around; */
+  background-color: white;
+  height: 20rem;
+  gap: 2rem;
+  border-radius: 1.5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding-right: 1rem;
+}
+
+.text h2 {
+  /* margin-top: -3rem; */
+  color: var(--Very-Dark-Grayis-Blue);
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  font-size: 25px;
+}
+
+.text p {
+  font-size: 1rem;
+  color: var(--Desaturated-Dark-Blue);
+  line-height: 1.4rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.person {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.person-img img {
+  border-radius: 50%;
+}
+
+.person-img img {
+  width: 2.6rem;
+}
+
+.person-info {
+  text-align: left;
+  align-items: center;
+}
+
+.person-info h3 {
+  color: var(--Very-Dark-Grayis-Blue);
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.person-info p {
+  color: var(--Grayish-Blue);
+}
+
+.sharing-thing {
+  position: relative;
+}
+
+.sharing-thing button {
+  border-radius: 50%;
+  border-color: transparent;
+  padding: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.socials {
+  background-color: var(--Very-Dark-Grayis-Blue);
+  display: flex;
+  padding: 1rem;
+  gap: 2rem;
+  position: absolute;
+  top: -270%;
+  right: -300%;
+  align-items: center;
+  padding: 1.2rem 2.7rem;
+  border-radius: 1rem;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid var(--Very-Dark-Grayis-Blue);
+  position: absolute;
+  top: -130%;
+  left: -15%;
+}
+
+.socials p {
+  letter-spacing: 0.3rem;
+  color: var(--Grayish-Blue);
+  font-size: 12px;
+}
+
+.button-2 {
+  background-color: var(--Very-Dark-Grayis-Blue);
+}
+
+@media (max-width: 1300px) {
+  .container {
+    grid-template-columns: 40% 60%;
+  }
+
+  .text h2 {
+    line-height: 1.5rem;
+
+    font-size: 20px;
+  }
+  .text p {
+    font-size: 0.8rem;
+
+    line-height: 1.3;
+  }
+  .second {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .text h2 {
+    line-height: 1.3rem;
+
+    font-size: 18px;
+  }
+
+  .text p {
+    font-size: 0.8rem;
+
+    line-height: 1.1rem;
+  }
+
+  .person {
+    gap: 0.8rem;
+  }
+
+  .person-img img {
+    width: 2rem;
+  }
+
+  .person-info h3 {
+    color: var(--Very-Dark-Grayis-Blue);
+    font-weight: 700;
+    font-size: 13px;
+  }
+
+  .second {
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .text h2 {
+    line-height: 1.1rem;
+    font-size: 16px;
+  }
+
+  .text p {
+    font-size: 0.7rem;
+
+    line-height: 1.1rem;
+  }
+
+  .person-info h3 {
+    color: var(--Very-Dark-Grayis-Blue);
+    font-weight: 700;
+    font-size: 11px;
+  }
+
+  .person-info p {
+    font-size: 10px;
+  }
+
+  .second {
+    padding-left: 1rem;
+  }
+
+  .container {
+    width: 80%;
+    grid-template-columns: 50% 50%;
+  }
+
+  /* .btn,
+  .btn img {
+    width: 20px;
+  } */
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+  .text h2 {
+    line-height: 1.1rem;
+    font-size: 14px;
+  }
+
+  .text p {
+    font-size: 0.6rem;
+
+    line-height: 1.1rem;
+  }
+
+  .person-info h3 {
+    color: var(--Very-Dark-Grayis-Blue);
+    font-weight: 700;
+    font-size: 10px;
+  }
+
+  .person-info p {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 426px) {
+  .container {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    height: 80%;
+    /* margin-top: 5rem;
+    margin-bottom: 5rem; */
+  }
+
+  .first {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 1.5rem;
+    height: 17rem;
+  }
+
+  .first img {
+    object-fit: cover;
+  }
+
+  .second {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 1.5rem;
+    margin-top: -1rem;
+    height: 17rem;
+  }
+
+  .text h2 {
+    font-size: 19px;
+    line-height: 1.3rem;
+  }
+
+  .text p {
+    font-size: 15px;
+    line-height: 1.2rem;
+  }
+
+  .person-img img {
+    width: 2.5rem;
+  }
+
+  .person-info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .person-info h3 {
+    color: var(--Very-Dark-Grayis-Blue);
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .person-info p {
+    font-size: 10px;
+  }
+  /* .first,
+  .second {
+    height: auto;
+  } */
+
+  .triangle {
+    display: none;
+  }
+
+  .footer {
+    position: relative;
+  }
+  .socials {
+    width: calc(0.9 * 100vw);
+    top: 0%;
+    right: -50%;
+  }
+  .sharing-thing {
+    position: static;
+  }
+  .button-2 {
+    position: absolute;
+    top: 20%;
+    right: 0;
+  }
+  .socials {
+    top: -10%;
+    right: -5%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
